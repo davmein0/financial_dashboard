@@ -1,0 +1,28 @@
+.chart-container {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  height: 320px;
+  width: 100%;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.recharts-cartesian-grid line {
+  stroke: #e5e7eb;
+}
+
+.recharts-tooltip-wrapper {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.recharts-tooltip-label {
+  color: #6b7280;
+}
