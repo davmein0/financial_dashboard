@@ -2,10 +2,22 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Chart from "./components/ChartEx.tsx";
+import PiechartEx from "./components/PiechartEx.tsx";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  // // Pie chart
+  // state = {
+  //   activeIndex: 0,
+  // };
+
+  // onPieEnter = (_, index) => {
+  //   this.setState({
+  //     activeIndex: index,
+  //   });
+  // };
 
   return (
     <>
@@ -32,6 +44,10 @@ function App() {
       <div>
         <h2>Chart Example</h2>
         <Chart />
+        <h1>Pie Chart Example</h1>
+      </div>
+      <div className="piechart-container">
+        <PiechartEx />
       </div>
     </>
   );
