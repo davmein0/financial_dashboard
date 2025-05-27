@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Chart from "./components/ChartEx.tsx";
 import PiechartEx from "./components/PiechartEx.tsx";
+import StackedBarChart from "./components/StackedBarchart.tsx";
 import "./App.css";
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
       <div className="piechart-container">
         <PiechartEx />
       </div>
+      <StackedBarChart />
     </>
   );
 }
