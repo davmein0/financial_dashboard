@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Chart from "./components/ChartEx.tsx";
@@ -8,7 +8,19 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    fetch("/members")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   // // Pie chart
   // state = {
   //   activeIndex: 0,
@@ -50,7 +62,7 @@ function App() {
       <div className="piechart-container">
         <PiechartEx />
       </div>
-      <StackedBarChart />
+      <StackedBarChart data={data} />
     </>
   );
 }
